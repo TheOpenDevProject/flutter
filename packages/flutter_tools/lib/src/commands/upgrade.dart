@@ -29,7 +29,7 @@ class UpgradeCommand extends FlutterCommand {
   Future<Null> runCommand() async {
     try {
       await runCheckedAsync(<String>[
-        'git', 'rev-parse', '@{u}'
+        'git', 'rev-parse', 'D:\\flutter\\flutter\\'
       ], workingDirectory: Cache.flutterRoot);
     } catch (e) {
       throwToolExit(e);
