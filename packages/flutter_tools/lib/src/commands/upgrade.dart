@@ -32,7 +32,7 @@ class UpgradeCommand extends FlutterCommand {
         'git', 'rev-parse', '@{u}'
       ], workingDirectory: Cache.flutterRoot);
     } catch (e) {
-      throwToolExit('Unable to upgrade Flutter: no upstream repository configured.');
+      throwToolExit(e);
     }
 
     final FlutterVersion flutterVersion = FlutterVersion.instance;
